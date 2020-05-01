@@ -1,0 +1,17 @@
+{
+    "name": "pawel/room-temp-api",
+    "authors": [
+        {
+            "name": "pawel.wis",
+            "email": "pawel.wis.me@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.1"
+    },
+    "autoload": {
+        "psr-4":{
+            "App\\": "app"
+        }
+    }
+}
