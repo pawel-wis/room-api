@@ -1,5 +1,4 @@
 <?php
 require_once('config/DatabaseConnector.php');
 
-$db = new DatabaseConnector();
-$db->connect();
+// Parse url and pass data to controller 
