@@ -44,6 +44,7 @@ class EnvLoader{
             while( ($line = fgets($handle)) !== false){
                 if( $this->check_line($line)){
                     $splitted_line = explode("=", $line);
+                    $splitted_line[1] = str_replace(array("\r\n", " ", "\n"), "",$splitted_line[1]); // remove white spaces
                     $env[$splitted_line[0]] = $splitted_line[1];
                 }
             }
