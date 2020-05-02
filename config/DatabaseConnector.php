@@ -34,4 +34,9 @@ class DatabaseConnector {
 
         return $this->conn;
     }
+
+
+    public function getDBName(){
+        return $this->db_name;
+    }
 }
