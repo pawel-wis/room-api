@@ -1,10 +1,10 @@
 <?php
 require_once('config/DatabaseConnector.php');
 require_once('app/Controller/WConditionsController.php');
+require_once('app/Controller/ErrorController.php');
 
 // splitted request url
 $splitted_url = explode('/', $_SERVER['REQUEST_URI']);
- var_dump($splitted_url);
 
  switch($splitted_url[2]){
      case '':
@@ -17,6 +17,7 @@ $splitted_url = explode('/', $_SERVER['REQUEST_URI']);
      break;
 
      default:
-        echo("WRONG request");
+        $controller = new ErrorController;
+        $controller->message();
      break;
  }
