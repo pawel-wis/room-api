@@ -1,16 +1,15 @@
 <?php
+require_once(dirname(__DIR__) . '/Abstract/Model.php');
+
 // This class represents database entity
-class WConditions{
-    // db connection and table name
-    private $conn;
-    private $table_name;
+class WConditions extends Model{
 
     private $temperature;
     private $humidity;
 
-    public function __construct($conn){
-        $this->conn = $conn;
+    public function __construct(){
+        //passs table name to parent constructor
+        parent::__construct('weather');
     }
 
-    // need to implement db reading functions
 }
