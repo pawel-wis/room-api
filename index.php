@@ -13,7 +13,6 @@ $splitted_url = explode('/', $_SERVER['REQUEST_URI']);
      case 'weather':
         $method = $_SERVER['REQUEST_METHOD'];
         $controller = new WConditionsController;
-
      break;
 
      default:
